@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Basics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+        p {
+            margin: 10px 0;
+            justify-content:center;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Computer Basics</h1>
+    </header>
+    <section>
+        <h2>Types of Computers</h2>
+        <ul>
+            <li>Embedded computers</li>
+            <li>Personal computers</li>
+            <li>Servers and Enterprise systems</li>
+            <li>Supercomputers and Grid computers</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Main Parts of a Computer</h2>
+        <p>A computer consists of five functionally independent main parts:</p>
+        <ul>
+            <li>Input</li>
+            <li>Memory</li>
+            <li>Arithmetic and Logic (ALU)</li>
+            <li>Output</li>
+            <li>Control Units</li>
+        </ul>
+        <p>We refer arithmetic and logic circuits, in conjunction with the main control circuits, as the processor. Input and output equipment is often collectively referred to as the input-output (I/O) unit. It is convenient to categorize this information as either instructions or data. A program is a list of instructions which performs a task. Data are numbers and characters that are used as operands by the instructions. These are stored in memory.</p>
+    </section>
+    <section>
+        <h2>Memory</h2>
+        <p>The function of the memory unit is to store programs and data. There are two classes of storage, called primary and secondary.</p>
+        <h3>Primary Memory</h3>
+        <p>Also called main memory, it is a fast memory that operates at electronic speeds. Programs must be stored in this memory while they are being executed. The memory consists of a large number of semiconductor storage cells, each capable of storing one bit of information. These cells are rarely read or written individually. Instead, they are handled in groups of fixed size called "words". The memory is organized so that one word can be stored or retrieved in one basic operation.</p>
+        <p>A memory in which any location can be accessed in a short and fixed amount of time after specifying its address is called a random-access memory (RAM).</p>
+        <h3>Cache Memory</h3>
+        <p>When the execution of an instruction requires data located in the main memory, the data are fetched and copies are also placed in the cache. If instructions or data locations are accessed repeatedly while copies of their contents are available in the cache, they can be fetched quickly.</p>
+        <h3>Secondary Storage</h3>
+        <p>Although primary memory is essential, it tends to be expensive and does not retain information when power is turned off. Thus additional, less expensive, permanent secondary storage is used when large amounts of data and many programs have to be stored, particularly for information that is accessed infrequently. Access times for secondary storage are longer than for primary memory. A wide selection of secondary storage devices is available, including magnetic disks, optical disks (DVD and CD), and flash memory devices.</p>
+    </section>
+    <section>
+        <h2>ALU (Arithmetic and Logic Unit)</h2>
+        <p>Most computer operations are executed in the arithmetic and logic unit (ALU) of the processor. Any arithmetic or logic operation, such as addition, subtraction, multiplication, division, or comparison of numbers, is initiated by bringing the required operands into the processor, where the operation is performed by the ALU. When operands are brought into the processor, they are stored in high-speed storage elements called registers. Each register can store one word of data. Access times to registers are even shorter than access times to the cache unit on the processor chip.</p>
+    </section>
+    <section>
+        <h2>Control Unit</h2>
+        <p>The memory, arithmetic and logic, and I/O units store and process information and perform input and output operations. The operation of these units must be coordinated in some way. This is the responsibility of the control unit.</p>
+        <ul>
+            <li>The computer accepts information in the form of programs and data through an input unit and stores it in the memory.</li>
+            <li>Information stored in the memory is fetched under program control into an arithmetic and logic unit, where it is processed.</li>
+            <li>Processed information leaves the computer through an output unit.</li>
+            <li>All activities in the computer are directed by the control unit.</li>
+        </ul>
+    </section>
+    <section>
+      <h2>Processor and Memory Connection</h2>
+      <p>Below shows how the memory and the processor can be connected:</p>
+      <img src="images/1.png" alt="img">
+      <p>In addition to the ALU and the control circuitry, the processor contains a number of registers used for several different purposes.</p>
+      <ul>
+          <li>The instruction register (IR) holds the instruction that is currently being executed.</li>
+          <li>The program counter (PC) is another specialized register which contains the memory address of the next instruction to be fetched and executed.</li>
+          <li>General-purpose registers R0 through Rn−1, often called processor registers, are also present.</li>
+      </ul>
+      <p>
+        The processor-memory interface is a circuit which manages the transfer of data between
+        the main memory and the processor. If a word is to be read from the memory, the interface
+        sends the address of that word to the memory along with a Read control signal. The interface
+        waits for the word to be retrieved, then transfers it to the appropriate processor register. If
+        a word is to be written into memory, the interface transfers both the address and the word
+        to the memory along with a Write control signal
+      </p>
+  </section>
+  <section>
+    <h2>Typical Operating Steps</h2>
+    <p>A program must be in the main memory in order for it to be executed. Execution of the program begins when the PC is set to point to the first instruction of the program.</p>
+    <p>The contents of the PC are transferred to the memory along with a Read control signal. When the addressed word has been fetched from the memory, it is loaded into register IR. At this point, the instruction is ready to be interpreted and executed.</p>
+</section>
+
+</body>
+</html>
